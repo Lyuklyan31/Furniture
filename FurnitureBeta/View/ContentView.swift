@@ -3,24 +3,19 @@ import SwiftUI
 import Firebase
 
 struct ContentView: View {
-    //favorite
     
-    @AppStorage("uid") var userID: String = ""
+@AppStorage("uid") var userID: String = ""
     
     var body: some View {
-      
-        
-            
-            if userID == "" {
-                AuthView()
-            } else {
-                MainTabView()
-            }
-            
-            
-        
+    
+        if userID.isEmpty {
+            AuthView()
+        } else {
+            MainTabView()
+        }
     }
 }
+
 #Preview {
     ContentView()
 }

@@ -11,8 +11,7 @@ class NetworkService {
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-            //            let jsonString = String(data: data, encoding: .utf8)
-            //            print("Received JSON data: \(jsonString ?? "Failed to decode JSON data")")
+           
             
             let jsonDecoder = JSONDecoder()
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase

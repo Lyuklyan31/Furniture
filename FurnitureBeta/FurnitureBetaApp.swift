@@ -1,10 +1,8 @@
-
-
-
-import SwiftUI 
+import SwiftUI
 import FirebaseCore
 import FirebaseAuth
-import Firebase
+import GoogleSignIn
+
 @main
 struct FurnitureBetaApp: App {
     @StateObject private var managedObjectModel = ManagedObjectModel()
@@ -28,5 +26,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     //MARK: Phone Auth Needs to Intialize Remote Notifcations
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) async -> UIBackgroundFetchResult {
         return .noData
+    }
+    
+    func application(_ app: UIApplication,
+                     open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+      return GIDSignIn.sharedInstance.handle(url)
     }
 }

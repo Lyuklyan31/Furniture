@@ -11,7 +11,7 @@ struct AllView: View {
                 LazyVGrid(columns: allViewModel.columns) {
                     ForEach(allViewModel.filteredProducts) { item in
                         NavigationLink(destination: DetailFurnitureView(furniture: item)) {
-                            CategorySubView(item: item)
+                            CategorySubView(name: item.name, price: item.price, photoURL: item.photoForPreview)
                                 .padding(.horizontal)
                         }
                     }

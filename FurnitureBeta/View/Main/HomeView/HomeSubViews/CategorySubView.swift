@@ -1,17 +1,17 @@
-
 import SwiftUI
 import Kingfisher
 
 struct CategorySubView: View {
-    let item: Product
+    let name: String
+    let price: Double
+    let photoURL: String?
 
     var body: some View {
         let screenWidth = UIScreen.main.bounds.width
         let imageSize = adaptiveSize(for: screenWidth)
 
         VStack {
-            if let firstPhotoURL = item.photoForPreview,
-               let url = URL(string: firstPhotoURL) {
+            if let photoURL = photoURL, let url = URL(string: photoURL) {
                 KFImage(url)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -25,15 +25,14 @@ struct CategorySubView: View {
             }
             
             HStack {
-                Text("\(item.name)")
-                    .font(.headline)
+                Text(name)
                     .bold()
                     .lineLimit(1)
                 Spacer()
             }
             
             HStack {
-                Text("$\(String(format: "%.2f", item.price))")
+                Text("$\(String(format: "%.2f", price))")
                     .font(.headline)
                     .bold()
                 
@@ -42,6 +41,7 @@ struct CategorySubView: View {
         }
         .padding()
     }
+    
     func adaptiveSize(for screenWidth: CGFloat) -> CGFloat {
         if screenWidth > 500 {
             return 166

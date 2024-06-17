@@ -26,5 +26,14 @@ struct Product: Codable, Identifiable {
         var red: [String]?
         var brown: [String]?
         var yellow: [String]?
+        var black: [String]?
+        var green: [String]?
+        var orange: [String]?
+        var purple: [String]?
+        var gray: [String]?
+        var pink: [String]?
+        var cyan: [String]?
+        var magenta: [String]?
+        var lime: [String]?
     }
 }

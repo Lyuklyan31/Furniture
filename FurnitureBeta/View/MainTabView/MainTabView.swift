@@ -5,6 +5,7 @@ struct MainTabView: View {
     @StateObject private var searchViewModel = SearchViewModel(viewModel: DataViewModel())
     @StateObject private var  allViewModel = AllViewModel(viewModel: DataViewModel())
     @StateObject private var  dataViewModel = DataViewModel()
+    
     var body: some View {
         ZStack {
             TabView {
@@ -28,7 +29,7 @@ struct MainTabView: View {
                         Label("Cart", systemImage: "cart")
                     }
                 
-                MeView(viewModel: AuthViewModel())
+                MeView()
                     .tabItem {
                         Label("Acount", systemImage: "person")
                     }

@@ -36,10 +36,29 @@ class DetailFurnitureViewModel: ObservableObject {
             return furniture.photos?.brown ?? []
         case "yellow":
             return furniture.photos?.yellow ?? []
+        case "green":
+            return furniture.photos?.green ?? []
+        case "black":
+            return furniture.photos?.black ?? []
+        case "purple":
+            return furniture.photos?.purple ?? []
+        case "orange":
+            return furniture.photos?.orange ?? []
+        case "pink":
+            return furniture.photos?.pink ?? []
+        case "gray":
+            return furniture.photos?.gray ?? []
+        case "cyan":
+            return furniture.photos?.cyan ?? []
+        case "magenta":
+            return furniture.photos?.magenta ?? []
+        case "lime":
+            return furniture.photos?.lime ?? []
         default:
             return []
         }
     }
+
     
     func addToCart(moc: NSManagedObjectContext) {
         let fetchRequest: NSFetchRequest<ProductEntity> = ProductEntity.fetchRequest()
@@ -64,4 +83,48 @@ class DetailFurnitureViewModel: ObservableObject {
             print("Failed to add product: \(error)")
         }
     }
+
+    func addToFavorite(moc: NSManagedObjectContext) {
+        let product = FavoriteEntity(context: moc)
+        product.name = furniture.name
+        product.price = furniture.price
+        product.photoForPreview = furniture.photoForPreview
+        
+        do {
+            try moc.save()
+            print("Product added to favorites.")
+        } catch {
+            print("Failed to add product to favorites: \(error)")
+        }
+    }
+
+    func removeFromFavorite(moc: NSManagedObjectContext) {
+        let fetchRequest: NSFetchRequest<FavoriteEntity> = FavoriteEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "name == %@", furniture.name)
+        
+        do {
+            let existingProducts = try moc.fetch(fetchRequest)
+            for product in existingProducts {
+                moc.delete(product)
+            }
+            try moc.save()
+            print("Product removed from favorites.")
+        } catch {
+            print("Failed to remove product from favorites: \(error)")
+        }
+    }
+
+
+    func isFavorite(moc: NSManagedObjectContext) -> Bool {
+            let fetchRequest: NSFetchRequest<FavoriteEntity> = FavoriteEntity.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "name == %@", furniture.name)
+
+            do {
+                let results = try moc.fetch(fetchRequest)
+                return !results.isEmpty
+            } catch {
+                print("Failed to fetch favorites: \(error.localizedDescription)")
+                return false
+            }
+        }
 }

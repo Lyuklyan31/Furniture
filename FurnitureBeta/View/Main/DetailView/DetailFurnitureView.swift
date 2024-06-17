@@ -23,6 +23,16 @@ struct DetailFurnitureView: View {
             .frame(height: 375)
             .cornerRadius(13)
             .shadow(radius: 7)
+            .overlay {
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        ButtonFavorite(detailFurnitureViewModel: detailFurnitureViewModel, moc: moc)
+                            .padding()
+                    }
+                }
+            }
 
             HStack {
                 Text(detailFurnitureViewModel.furniture.name)

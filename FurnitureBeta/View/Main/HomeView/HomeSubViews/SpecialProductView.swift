@@ -39,7 +39,7 @@ struct HomeSubView: View {
             LazyVGrid(columns: columns) {
                 ForEach(filteredProducts) { item in
                     NavigationLink(destination: DetailFurnitureView(furniture: item)) {
-                        CategorySubView(item: item)
+                        CategorySubView(name: item.name, price: item.price, photoURL: item.photoForPreview)
                             .padding(.horizontal)
                     }
                 }

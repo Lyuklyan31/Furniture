@@ -4,7 +4,7 @@ import SwiftUI
 class SearchViewModel: ObservableObject {
     @Published var searchingText: String = ""
     
-    @ObservedObject var viewModel: DataViewModel
+    var viewModel: DataViewModel
     
     let columns = [GridItem(.adaptive(minimum: 130))]
     
