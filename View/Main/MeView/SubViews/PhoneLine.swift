@@ -9,7 +9,7 @@ struct PhoneLine: View {
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "phone.fill")
+                Image(systemName: "phone")
                 
                 Text("Phone")
                 
