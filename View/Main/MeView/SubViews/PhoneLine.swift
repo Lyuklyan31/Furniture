@@ -21,14 +21,14 @@ struct PhoneLine: View {
                 Image(systemName: "phone")
                 
                 TextField("Phone", text: $phoneNumber)
-//                Button {
-//
-//
-//
-//                } label: {
-//                    Text("Change")
-//                        .bold()
-//                }
+                Button {
+
+
+
+                } label: {
+                    Text("Change")
+                        .bold()
+                }
                 
                  .disabled(phoneNumber.isEmpty || phoneNumber == viewModel.user?.phoneNumber)
             }
