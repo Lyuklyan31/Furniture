@@ -19,6 +19,10 @@ struct MeView: View {
                         if ((user.email?.isEmpty) != nil) {
                             EmailLine(viewModel: viewModel, email: user.email ?? "")
                         }
+                        
+                        if ((user.phoneNumber?.isEmpty) != nil) {
+                            PhoneLine(viewModel: viewModel, phoneNumber: user.phoneNumber ?? "")
+                        }
                     }
                        
                     
