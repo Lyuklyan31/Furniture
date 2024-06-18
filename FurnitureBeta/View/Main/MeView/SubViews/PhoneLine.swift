@@ -8,15 +8,17 @@ struct PhoneLine: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Image(systemName: "phone.fill")
-                
-                Text("Phone")
-                
-                Spacer()
+            if phoneNumber.isEmpty {
+                HStack {
+                    Image(systemName: "phone.fill")
+                    
+                    Text("Phone")
+                    
+                    Spacer()
+                }
+                .offset(y: 3)
+                .padding(.horizontal, 30)
             }
-            .offset(y: 3)
-            .padding(.horizontal, 30)
             HStack {
                 Image(systemName: "phone")
                 

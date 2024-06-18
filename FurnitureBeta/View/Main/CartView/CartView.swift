@@ -6,7 +6,7 @@ struct CartView: View {
     @FetchRequest(sortDescriptors: []) var products: FetchedResults<ProductEntity>
     @State private var showingSheet = false
     @State private var isCartEmpty = false
-
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -28,7 +28,24 @@ struct CartView: View {
             }
         }
     }
+    
+        private func removeRows(at offsets: IndexSet) {
+            for index in offsets {
+                let product = products[index]
+                moc.delete(product)
+            }
+            do {
+                try moc.save()
+            } catch {
+                print("Failed to save changes: \(error)")
+            }
+            
+            isCartEmpty = products.isEmpty
+        }
+    }
 
+
+extension CartView {
     private var cartContentView: some View {
         VStack {
             List {
@@ -37,7 +54,7 @@ struct CartView: View {
                 }
                 .onDelete(perform: removeRows)
             }
-
+            
             Button(action: {
                 showingSheet = true
             }) {
@@ -53,19 +70,5 @@ struct CartView: View {
         .sheet(isPresented: $showingSheet) {
             OrderSheet()
         }
-    }
-
-    private func removeRows(at offsets: IndexSet) {
-        for index in offsets {
-            let product = products[index]
-            moc.delete(product)
-        }
-        do {
-            try moc.save()
-        } catch {
-            print("Failed to save changes: \(error)")
-        }
-
-        isCartEmpty = products.isEmpty
     }
 }

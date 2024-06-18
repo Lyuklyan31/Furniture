@@ -7,7 +7,7 @@ struct AmountFurnitureView: View {
         HStack {
             Button(action: decreaseAmount) {
                 Circle()
-                    .frame(width: 45, height: 45)
+                    .frame(maxWidth: 45, maxHeight: 45)
                     .foregroundColor(.gray)
                     .opacity(0.3)
                     .overlay {
@@ -20,12 +20,12 @@ struct AmountFurnitureView: View {
             
             Text("\(amount)")
                 .font(.largeTitle)
-                .frame(width: 43)
+                .frame(maxWidth: 43)
                 .padding()
             
             Button(action: increaseAmount) {
                 Circle()
-                    .frame(width: 45, height: 45)
+                    .frame(maxWidth: 45, maxHeight: 45)
                     .foregroundColor(.gray)
                     .opacity(0.3)
                     .overlay {

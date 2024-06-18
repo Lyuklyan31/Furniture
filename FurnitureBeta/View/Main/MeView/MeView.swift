@@ -11,11 +11,13 @@ struct MeView: View {
                     
                     MePersonView(viewModel: viewModel)
                         .padding()
+                       
                    
                        
                     if let user = viewModel.user {
                         FirstNameLastName(viewModel: viewModel, firstName: user.firstName ?? "", lastName: user.lastName ?? "")
-                          
+                            .padding(.bottom, 30)
+                        
                         if ((user.email?.isEmpty) != nil) {
                             EmailLine(viewModel: viewModel, email: user.email ?? "")
                         }

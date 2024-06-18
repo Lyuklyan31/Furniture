@@ -79,6 +79,9 @@ class DetailFurnitureViewModel: ObservableObject {
             }
             try moc.save()
             addedToCart = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+                addedToCart = false
+            }
         } catch {
             print("Failed to add product: \(error)")
         }

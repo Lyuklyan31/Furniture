@@ -14,15 +14,17 @@ struct AddressLine: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Image(systemName: "location")
-                
-                Text("City")
-                
-                Spacer()
+            if address.isEmpty {
+                HStack {
+                    Image(systemName: "location")
+                    
+                    Text("City")
+                    
+                    Spacer()
+                }
+                .offset(y: 3)
+                .padding(.horizontal, 30)
             }
-            .offset(y: 3)
-            .padding(.horizontal, 30)
             HStack {
                 Image(systemName: "location")
                 
