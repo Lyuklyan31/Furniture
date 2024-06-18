@@ -22,7 +22,8 @@ struct ButtonForNavigation<Destination: View>: View {
                     .bold()
                     .foregroundColor(.primary)
                 Image(systemName: systemImage)
-                    .foregroundColor(.primary)
+                    .foregroundColor(title == "Phone" ? .red : .primary)
+                
 //                    .overlay {
 //                        if systemImage == "cart" {
 //                            ZStack {
