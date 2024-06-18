@@ -69,10 +69,3 @@ struct OurContacts: View {
         }
     }
 }
-
-//#Preview {
-//    OurContacts(region: MKCoordinateRegion(
-//        center: CLLocationCoordinate2D(latitude: 48.9226, longitude: 24.7103),
-//        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-//    ))
-//}

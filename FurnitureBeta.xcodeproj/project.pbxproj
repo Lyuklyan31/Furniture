@@ -13,7 +13,6 @@
 		840377EC2BEC270A00A12FA9 /* ButtonBuy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840377EB2BEC270A00A12FA9 /* ButtonBuy.swift */; };
 		840377EE2BECD3E400A12FA9 /* ChangeColorFurniture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840377ED2BECD3E400A12FA9 /* ChangeColorFurniture.swift */; };
 		8406D0DC2BE9013500CE558C /* CategorySubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406D0DB2BE9013500CE558C /* CategorySubView.swift */; };
-		840ED08A2C1B2F30006DD3C7 /* SignInAppleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840ED0892C1B2F30006DD3C7 /* SignInAppleHelper.swift */; };
 		840ED08E2C1B2F4C006DD3C7 /* AppleID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840ED08D2C1B2F4B006DD3C7 /* AppleID.swift */; };
 		84103AFB2C008EE000BF85A5 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84103AFA2C008EE000BF85A5 /* Category.swift */; };
 		84103AFD2C008EE900BF85A5 /* Promotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84103AFC2C008EE900BF85A5 /* Promotions.swift */; };
@@ -109,6 +108,8 @@
 		84CED8C72C146A2D006F4C59 /* ButtonDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CED8C62C146A2D006F4C59 /* ButtonDelete.swift */; };
 		84CED8C92C14999E006F4C59 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CED8C82C14999E006F4C59 /* FavoriteView.swift */; };
 		84D8AB822BE37F8900DD4A35 /* NetworkServiceWithCompletions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AB812BE37F8900DD4A35 /* NetworkServiceWithCompletions.swift */; };
+		84DD0FF42C218E7C00B36F62 /* SignInAppleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD0FF32C218E7C00B36F62 /* SignInAppleHelper.swift */; };
+		84DD0FF62C21B55400B36F62 /* AddressLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD0FF52C21B55400B36F62 /* AddressLine.swift */; };
 		84F1DCB22C091CE30047998F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1DCB12C091CE30047998F /* AuthView.swift */; };
 		84F1DCBD2C09D3050047998F /* ButtonChangeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1DCBC2C09D3050047998F /* ButtonChangeScreen.swift */; };
 		84F1DCBF2C09DF690047998F /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1DCBE2C09DF690047998F /* ForgotPassword.swift */; };
@@ -125,7 +126,6 @@
 		840377EB2BEC270A00A12FA9 /* ButtonBuy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBuy.swift; sourceTree = "<group>"; };
 		840377ED2BECD3E400A12FA9 /* ChangeColorFurniture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColorFurniture.swift; sourceTree = "<group>"; };
 		8406D0DB2BE9013500CE558C /* CategorySubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySubView.swift; sourceTree = "<group>"; };
-		840ED0892C1B2F30006DD3C7 /* SignInAppleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInAppleHelper.swift; path = AppleSignIn/SignInAppleHelper.swift; sourceTree = SOURCE_ROOT; };
 		840ED08D2C1B2F4B006DD3C7 /* AppleID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleID.swift; path = FurnitureBeta/View/FireBase/View/SubViews/Authentication/AppleSignIn/AppleID.swift; sourceTree = SOURCE_ROOT; };
 		84103AFA2C008EE000BF85A5 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		84103AFC2C008EE900BF85A5 /* Promotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotions.swift; sourceTree = "<group>"; };
@@ -217,6 +217,8 @@
 		84CED8C62C146A2D006F4C59 /* ButtonDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDelete.swift; sourceTree = "<group>"; };
 		84CED8C82C14999E006F4C59 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		84D8AB812BE37F8900DD4A35 /* NetworkServiceWithCompletions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceWithCompletions.swift; sourceTree = "<group>"; };
+		84DD0FF32C218E7C00B36F62 /* SignInAppleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInAppleHelper.swift; sourceTree = "<group>"; };
+		84DD0FF52C21B55400B36F62 /* AddressLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressLine.swift; sourceTree = "<group>"; };
 		84F1DCB12C091CE30047998F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		84F1DCBC2C09D3050047998F /* ButtonChangeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonChangeScreen.swift; sourceTree = "<group>"; };
 		84F1DCBE2C09DF690047998F /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
@@ -361,7 +363,7 @@
 			children = (
 				84C085592C1CFC4E0028A522 /* AuthAppleIDViewModel.swift */,
 				840ED08D2C1B2F4B006DD3C7 /* AppleID.swift */,
-				840ED0892C1B2F30006DD3C7 /* SignInAppleHelper.swift */,
+				84DD0FF32C218E7C00B36F62 /* SignInAppleHelper.swift */,
 			);
 			path = AppleSignIn;
 			sourceTree = "<group>";
@@ -496,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				8481CA1B2C108A0D00188738 /* FirstNameLastName.swift */,
+				84DD0FF52C21B55400B36F62 /* AddressLine.swift */,
 				845CEAC32C19D96E0097E96B /* EmailLine.swift */,
 				848A521A2C20A817004DDDCF /* PhoneLine.swift */,
 				8481CA142C1054B600188738 /* MeViewSingUp.swift */,
@@ -781,6 +784,7 @@
 				84B127BE2BFF4A030053DEB6 /* LoginButtonsView.swift in Sources */,
 				84C085432C1BADB90028A522 /* AuthAnonymouseViewModel.swift in Sources */,
 				847FC8712BF7ABC200C7AAB6 /* LoginView2.swift in Sources */,
+				84DD0FF42C218E7C00B36F62 /* SignInAppleHelper.swift in Sources */,
 				8481CA1A2C10721E00188738 /* ButtonFavorite.swift in Sources */,
 				8437426B2C112B2100D6BE1B /* Utilities.swift in Sources */,
 				844629CC2C07EA1000D7D393 /* UIApplicationExtension.swift in Sources */,
@@ -815,7 +819,6 @@
 				843DF1762BE0F946005AD8E7 /* MeView.swift in Sources */,
 				84C97E392C0486B100D18779 /* DetailFurnitureViewModel.swift in Sources */,
 				840ED08E2C1B2F4C006DD3C7 /* AppleID.swift in Sources */,
-				840ED08A2C1B2F30006DD3C7 /* SignInAppleHelper.swift in Sources */,
 				84B127B12BFF490D0053DEB6 /* ContentStackView.swift in Sources */,
 				842914192BE551CB0089663E /* DetailFurnitureView.swift in Sources */,
 				84C97E442C05178400D18779 /* LoginView.swift in Sources */,
@@ -859,6 +862,7 @@
 				843DF1892BE10632005AD8E7 /* СategoryAppearanceView.swift in Sources */,
 				8421869D2C172BAF006CE278 /* UserManager.swift in Sources */,
 				845CEAC62C19E5B80097E96B /* LinkEmail.swift in Sources */,
+				84DD0FF62C21B55400B36F62 /* AddressLine.swift in Sources */,
 				84C97E342C036BF600D18779 /* AllViewModel.swift in Sources */,
 				84C97E522C06757100D18779 /* InputEmail.swift in Sources */,
 				8452E55E2BE3F85C00D56201 /* FurnitureView.swift in Sources */,

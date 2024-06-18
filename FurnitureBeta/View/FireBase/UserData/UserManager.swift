@@ -58,6 +58,13 @@ final class UserManager {
         try await userDocument(userId: userId).updateData(data)
     }
     
+    func updateUserAddress(userId: String, address: String) async throws {
+        let data: [String: Any] = [
+            DBUser.CodingKeys.address.rawValue : address
+        ]
+        try await userDocument(userId: userId).updateData(data)
+    }
+    
     func updateUserProfilePhoneNumber(userId: String, phoneNumber: String) async throws {
         let data: [String: Any] = [
             DBUser.CodingKeys.phoneNumber.rawValue : phoneNumber

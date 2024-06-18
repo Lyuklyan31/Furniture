@@ -23,6 +23,8 @@ struct MeView: View {
                         if ((user.phoneNumber?.isEmpty) != nil) {
                             PhoneLine(viewModel: viewModel, phoneNumber: user.phoneNumber ?? "")
                         }
+                        
+                        AddressLine(viewModel: viewModel, address: user.address ?? "")
                     }
                        
                     

@@ -1,33 +1,40 @@
 //
-//  EmailLine.swift
+//  AddressLine.swift
 //  FurnitureBeta
 //
-//  Created by admin on 12.06.2024.
+//  Created by admin on 18.06.2024.
 //
 
 import SwiftUI
 
-struct EmailLine: View {
+struct AddressLine: View {
     var viewModel: MeViewModel
     
-    @State var email: String
+    @State var address: String
     
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "mail.fill")
+                Image(systemName: "location")
                 
-                Text("Email")
+                Text("City")
                 
                 Spacer()
             }
             .offset(y: 3)
             .padding(.horizontal, 30)
             HStack {
-                Image(systemName: "mail")
+                Image(systemName: "location")
                 
-                Text(email)
+                TextField("City", text: $address)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                Button {
+                    viewModel.changeAddress(text: address)
+                } label: {
+                    Text("Change")
+                        .bold()
+                }
+                .disabled(address.isEmpty || address == viewModel.user?.address)
 
             }
             .padding()

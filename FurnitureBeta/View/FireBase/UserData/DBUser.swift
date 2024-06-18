@@ -17,6 +17,7 @@ struct DBUser: Codable {
     let profileImagePath: String?
     let profileImagePathURL: String?
     let phoneNumber: String?
+    let address: String?
     
     init(auth: AuthDataResultModel) {
         self.userId = auth.uid
@@ -28,6 +29,7 @@ struct DBUser: Codable {
         self.profileImagePath = nil
         self.profileImagePathURL = nil
         self.phoneNumber = nil
+        self.address = nil
     }
     
     init(
@@ -39,7 +41,8 @@ struct DBUser: Codable {
      lastName: String? = nil,
      profileImagePath: String? = nil,
      profileImagePathURL: String? = nil,
-     phoneNumber: String? = nil
+     phoneNumber: String? = nil,
+     address: String? = nil
     ) {
         self.userId = userId
         self.isAnonymous = isAnonymous
@@ -50,6 +53,7 @@ struct DBUser: Codable {
         self.profileImagePath = profileImagePath
         self.profileImagePathURL = profileImagePathURL
         self.phoneNumber = phoneNumber
+        self.address = address
     }
     enum CodingKeys: String, CodingKey {
         case userId = "user_id"
@@ -61,6 +65,7 @@ struct DBUser: Codable {
         case profileImagePath = "profile_image_path"
         case profileImagePathURL = "profile_image_path_url"
         case phoneNumber = "phone_number"
+        case address = "address"
     }
     
     init(from decoder: any Decoder) throws {
@@ -74,6 +79,7 @@ struct DBUser: Codable {
         self.profileImagePath = try container.decodeIfPresent(String.self, forKey: .profileImagePath)
         self.profileImagePathURL = try container.decodeIfPresent(String.self, forKey: .profileImagePathURL)
         self.phoneNumber = try container.decodeIfPresent(String.self, forKey: .phoneNumber)
+        self.address = try container.decodeIfPresent(String.self, forKey: .address)
     }
     
     func encode(to encoder: any Encoder) throws {
@@ -87,5 +93,6 @@ struct DBUser: Codable {
         try container.encodeIfPresent(self.profileImagePath, forKey: .profileImagePath)
         try container.encodeIfPresent(self.profileImagePathURL, forKey: .profileImagePathURL)
         try container.encodeIfPresent(self.phoneNumber, forKey: .phoneNumber)
+        try container.encodeIfPresent(self.address, forKey: .address)
     }
 }

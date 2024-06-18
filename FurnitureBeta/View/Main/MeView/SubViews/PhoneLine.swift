@@ -20,17 +20,17 @@ struct PhoneLine: View {
             HStack {
                 Image(systemName: "phone")
                 
-                TextField("Phone", text: $phoneNumber)
-                Button {
-
-
-
-                } label: {
-                    Text("Change")
-                        .bold()
-                }
-                
-                 .disabled(phoneNumber.isEmpty || phoneNumber == viewModel.user?.phoneNumber)
+                Text(phoneNumber)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+//                    .frame(maxWidth: .infinity)
+//                Button {
+//
+//                } label: {
+//                    Text("Change")
+//                        .bold()
+//                }
+//                
+//                 .disabled(phoneNumber.isEmpty || phoneNumber == viewModel.user?.phoneNumber)
             }
            .padding()
             

@@ -100,6 +100,14 @@ final class MeViewModel: ObservableObject {
         }
     }
     
+    func changeAddress(text: String) {
+        guard let user else { return }
+        Task {
+            try await UserManager.shared.updateUserAddress(userId: user.userId, address: text)
+            self.user = try await UserManager.shared.getUser(userId: user.userId)
+        }
+    }
+    
     func checkProviders() async {
         do {
             let providers = try AuthennticationManager.shared.getProviders()
