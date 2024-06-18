@@ -22,7 +22,7 @@ struct ButtonForNavigation<Destination: View>: View {
                     .bold()
                     .foregroundColor(.primary)
                 Image(systemName: systemImage)
-                    .foregroundColor(title == "Phone" ? .red : .primary)
+                    .foregroundColor(title == "Favorite" ? .red : .primary)
                 
 //                    .overlay {
 //                        if systemImage == "cart" {
