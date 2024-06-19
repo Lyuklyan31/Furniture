@@ -54,6 +54,8 @@ class DetailFurnitureViewModel: ObservableObject {
             return furniture.photos?.magenta ?? []
         case "lime":
             return furniture.photos?.lime ?? []
+        case "cream":
+            return furniture.photos?.cream ?? []
         default:
             return []
         }

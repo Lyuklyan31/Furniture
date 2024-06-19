@@ -35,5 +35,6 @@ struct Product: Codable, Identifiable {
         var cyan: [String]?
         var magenta: [String]?
         var lime: [String]?
+        var cream: [String]?
     }
 }
