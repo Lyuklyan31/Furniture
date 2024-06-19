@@ -72,6 +72,8 @@ struct ChangeColorFurnitureView: View {
             return Color(red: 1.0, green: 0.0, blue: 1.0)
         case "lime":
             return Color(red: 0.75, green: 1.0, blue: 0.0)
+        case "cream":
+            return Color(red: 1.0, green: 0.992, blue: 0.816)
         default:
             return .black
             
