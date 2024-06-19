@@ -14,17 +14,15 @@ struct EmailLine: View {
     
     var body: some View {
         VStack {
-            if email.isEmpty {
-                HStack {
-                    Image(systemName: "mail.fill")
-                    
-                    Text("Email")
-                    
-                    Spacer()
-                }
-                .offset(y: 3)
-                .padding(.horizontal, 30)
+            HStack {
+                Image(systemName: "mail.fill")
+                
+                Text("Email")
+                
+                Spacer()
             }
+            .offset(y: 3)
+            .padding(.horizontal, 30)
             HStack {
                 Image(systemName: "mail")
                 

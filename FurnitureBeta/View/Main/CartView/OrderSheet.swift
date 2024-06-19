@@ -3,6 +3,7 @@ import SwiftUI
 struct OrderSheet: View {
     @Environment(\.managedObjectContext) private var moc
     @StateObject var meViewModel = MeViewModel()
+<<<<<<< HEAD
     @FetchRequest(sortDescriptors: []) var products: FetchedResults<ProductEntity>
     @State private var showAlert = false
     @State private var alertMessage = ""
@@ -11,6 +12,10 @@ struct OrderSheet: View {
         products.reduce(0) { $0 + $1.price * Double($1.amount) }
     }
 
+=======
+    
+    
+>>>>>>> parent of 2e50248 (no message)
     var body: some View {
         VStack {
             if let user = meViewModel.user {
@@ -18,22 +23,13 @@ struct OrderSheet: View {
                     Text("You must Sign Up")
                 } else {
                     if let user = meViewModel.user {
-                        HStack {
-                            Text(user.firstName ?? "Please add your first name.")
-                            Text(user.lastName ?? "Please add your last name.")
-                        }
-                        .padding()
+                        FirstNameLastName(viewModel: meViewModel, firstName: user.firstName ?? "", lastName: user.lastName ?? "")
                     }
                     if let user = meViewModel.user {
-                        HStack {
-                            Text("Your Email")
-                                .padding(.horizontal)
-                            Spacer()
-                            Text(user.email ?? "Please Linked your Google or Gmail account.")
-                                .padding(.horizontal)
-                        }
+                        EmailLine(viewModel: meViewModel, email: user.email ?? "")
                     }
                     if let user = meViewModel.user {
+<<<<<<< HEAD
                         HStack {
                             Text("Your Phone")
                                 .padding(.horizontal)
@@ -109,6 +105,19 @@ struct OrderSheet: View {
             await meViewModel.checkProviders()
             try? await meViewModel.loadCurrentUser()
         }
+=======
+                        PhoneLine(viewModel: meViewModel, phoneNumber: user.phoneNumber ?? "")
+                    }
+                }
+            }
+        }
+            .task {
+                meViewModel.loadAuthProviders()
+                meViewModel.loadAuthUser()
+                await meViewModel.checkProviders()
+                try? await meViewModel.loadCurrentUser()
+            }
+>>>>>>> parent of 2e50248 (no message)
     }
 
     func orderProducts() {

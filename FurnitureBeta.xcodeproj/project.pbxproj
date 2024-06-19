@@ -372,6 +372,8 @@
 			isa = PBXGroup;
 			children = (
 				843DF1662BE0F72F005AD8E7 /* FurnitureBeta */,
+				843DF1652BE0F72F005AD8E7 /* Products */,
+				8481CA1E2C109D9500188738 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -381,7 +383,6 @@
 				843DF1642BE0F72F005AD8E7 /* FurnitureBeta.app */,
 			);
 			name = Products;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		843DF1662BE0F72F005AD8E7 /* FurnitureBeta */ = {
@@ -463,8 +464,6 @@
 		847520B52BFB515C00210325 /* NotUse */ = {
 			isa = PBXGroup;
 			children = (
-				8481CA1E2C109D9500188738 /* Frameworks */,
-				843DF1652BE0F72F005AD8E7 /* Products */,
 				84B127AA2BFF447C0053DEB6 /* Login */,
 				84D8AB812BE37F8900DD4A35 /* NetworkServiceWithCompletions.swift */,
 				845560E42BF3E68B00FBA41C /* CartModelUserDefaults.swift */,
@@ -518,7 +517,6 @@
 			children = (
 			);
 			name = Frameworks;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		84B127AA2BFF447C0053DEB6 /* Login */ = {
