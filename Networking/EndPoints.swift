@@ -9,8 +9,8 @@ import Foundation
 
 
 enum EndPoints: String {
-    case product = "/d7f4175d-3df8-4b16-98fc-433d6f9a6ec5"
-    case category = "/bb212a0e-0873-4071-b588-4b8298fe3e81"
-    case promotions = "/30aa73b2-07e7-4b80-9d3b-b4dafa6db9a6"
-    case special = "/5a91d8fc-410c-44be-9188-c29736d863ee"
+    case product = "/ffde5fbe-2ccf-45c1-8e8c-e4b770adf4dd"
+    case category = "/d5f9d2f0-e4c9-4075-9956-b17c6efb10c2"
+    case promotions = "/e22e4268-5448-46a1-889e-7206c479d202"
+    case special = "/5b91f7c7-a824-4f99-8f30-194c66d09c77"
 }

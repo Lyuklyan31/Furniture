@@ -6,3 +6,4 @@ struct Special: Codable, Identifiable {
     var photo1: String
     var photo2: String
 }
+
